@@ -51,22 +51,24 @@ function generatePassword() {
   var passwordResult = "";
 
   if (upperChar === true) {
-    emptyArr = emptyArr.concat(allChar[0].split(","));
+    emptyArr = emptyArr.concat(allChar[0].split(""));
     console.log(emptyArr);
   }
   if (lowerChar === true) {
-    emptyArr = emptyArr.concat(allChar[1].split(","));
+    emptyArr = emptyArr.concat(allChar[1].split(""));
   }
   if (numChar === true) {
-    emptyArr = emptyArr.concat(allChar[2].split(","));
+    emptyArr = emptyArr.concat(allChar[2].split(""));
   }
   if (specChar === true) {
-    emptyArr = emptyArr.concat(allChar[3].split(","));
+    emptyArr = emptyArr.concat(allChar[3].split(""));
   }
+  console.log(emptyArr);
   for (i = 0; i < passwordEq; i++) {
-      passwordResult = password(math.floor(math.random))
+      passwordResult += emptyArr[Math.floor(Math.random() * emptyArr.length)];
 
 
-  // 
+  
   }
+    return passwordResult;
 }
